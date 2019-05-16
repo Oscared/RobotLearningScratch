@@ -313,7 +313,6 @@ class Scratch3MotionBlocks {
     gridMove (args, util) {
       if(typeof util.stackFrame.loopCounter === 'undefined'){
         const squares = Cast.toNumber(args.STEPS);
-        console.log('Undefined Loopcounter');
         util.stackFrame.loopCounter = squares;
       }
 
@@ -326,39 +325,33 @@ class Scratch3MotionBlocks {
       const blue = {COLOR: '#0010F5'};
 
       if(util.stackFrame.loopCounter <= 0){
-        Looks.sayforsecs({MESSAGE: 'Done', SECS: 2}, util);
         return;
       }
 
       if(typeof util.stackFrame.index === 'undefined'){
-        console.log('Undefined index');
         util.stackFrame.index = 0;
       }
 
 
-
       if(Sens.touchingColor(red, util) || Sens.touchingColor(blue, util) || Sens.touchingColor(green, util)){
-        console.log('Red ' + Sens.touchingColor(red, util));
-        console.log('Green ' + Sens.touchingColor(green, util));
-        console.log('Blue ' + Sens.touchingColor(blue, util));
-
-        Looks.sayforsecs({MESSAGE: 'Cant go there. Retry!', SECS: 2}, util);
-
-        return;
+        Looks.sayforsecs({MESSAGE: 'Cant go there. Retry!', SECS: 3}, util);
+        if (util.stackTimerNeedsInit()) {
+            const duration = 3000;
+            util.startStackTimer(duration);
+            this.runtime.requestRedraw();
+            util.yield();
+        } else if (!util.stackTimerFinished()) {
+            util.yield();
+        } else {
+            util.stopAll();
+        }
       }else if(util.stackFrame.index<47){
-        console.log('Moving');
-        console.log('Index: ' + util.stackFrame.index);
-        console.log('Loopocunter: ' + util.stackFrame.loopCounter);
-        console.log('Red ' + Sens.touchingColor(red, util));
-        console.log('Green ' + Sens.touchingColor(green, util));
-        console.log('Blue ' + Sens.touchingColor(blue, util));
         util.stackFrame.index ++;
         this.moveSteps({STEPS: 1}, util);
         util.yield();
       }
       else{
         this.moveSteps({STEPS: 1}, util);
-        console.log('Done');
         util.stackFrame.loopCounter--;
         util.stackFrame.index = 0;
         util.yield();

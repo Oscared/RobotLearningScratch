@@ -81,11 +81,6 @@ class Scratch3EventBlocks {
     broadcast (args, util) {
         const broadcastVar = util.runtime.getTargetForStage().lookupBroadcastMsg(
             args.BROADCAST_OPTION.id, args.BROADCAST_OPTION.name);
-        console.log(Cast.toString(args));
-        console.log(Cast.toString(args.BROADCAST_OPTION.name));
-        console.log(Cast.toString(args.BROADCAST_OPTION.id));
-        console.log(Cast.toString(args.BROADCAST_OPTION));
-        console.log(Cast.toString(args.BROADCAST_INPUT));
         if (broadcastVar) {
             const broadcastOption = broadcastVar.name;
             util.startHats('event_whenbroadcastreceived', {
