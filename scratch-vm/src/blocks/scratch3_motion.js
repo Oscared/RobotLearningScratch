@@ -10,7 +10,6 @@ const StageLayering = require('../engine/stage-layering');
 
 const s3Looks = require('./scratch3_looks');
 const s3Sens = require('./scratch3_sensing');
-const s3Event = require('./scratch3_event');
 
 class Scratch3MotionBlocks {
     constructor (runtime) {
@@ -19,6 +18,10 @@ class Scratch3MotionBlocks {
          * @type {Runtime}
          */
         this.runtime = runtime;
+
+        //let Looks = new s3Looks(this.runtime);
+
+        //let Sens = new s3Sens(this.runtime);
 
     }
 
@@ -316,9 +319,6 @@ class Scratch3MotionBlocks {
         util.stackFrame.loopCounter = squares;
       }
 
-      let Looks = new s3Looks(this.runtime);
-
-      let Sens = new s3Sens(this.runtime);
 
       const red = {COLOR: '#FF0000'};
       const green = {COLOR: '#49BC00'};
@@ -333,7 +333,10 @@ class Scratch3MotionBlocks {
       }
 
 
+      let Sens = new s3Sens(this.runtime);
+
       if(Sens.touchingColor(red, util) || Sens.touchingColor(blue, util) || Sens.touchingColor(green, util)){
+        let Looks = new s3Looks(this.runtime);
         Looks.sayforsecs({MESSAGE: 'Cant go there. Retry!', SECS: 3}, util);
         if (util.stackTimerNeedsInit()) {
             const duration = 3000;
@@ -362,8 +365,6 @@ class Scratch3MotionBlocks {
 
     pickObject(args, util){
 
-      let Looks = new s3Looks(this.runtime);
-
       let Sens = new s3Sens(this.runtime);
 
       if(Sens.touchingObject({TOUCHINGOBJECTMENU: 'news'}, util)){
@@ -372,10 +373,13 @@ class Scratch3MotionBlocks {
         util.startHats('event_whenbroadcastreceived', {
             BROADCAST_OPTION: 'pick_up'
         });
+        let Looks = new s3Looks(this.runtime);
         Looks.sayforsecs({MESSAGE: 'Picked up the newspaper', SECS: 3}, util);
       }else{
+        let Looks = new s3Looks(this.runtime);
         Looks.sayforsecs({MESSAGE: 'I cant pick up a newspaper here.', SECS: 3}, util);
       }
+
 
     }
 
