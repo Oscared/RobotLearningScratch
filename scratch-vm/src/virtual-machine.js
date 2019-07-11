@@ -7,6 +7,7 @@ if (typeof TextEncoder === 'undefined') {
 }
 const EventEmitter = require('events');
 const JSZip = require('jszip');
+const fs = require('fs');
 
 const Buffer = require('buffer').Buffer;
 const centralDispatch = require('./dispatch/central-dispatch');
@@ -38,6 +39,8 @@ const CORE_EXTENSIONS = [
     // 'variables',
     // 'myBlocks'
 ];
+
+const test_project = require('./Default_Project/project.json');
 
 /**
  * Handles connections between blocks, stage, and extensions.
@@ -167,6 +170,13 @@ class VirtualMachine extends EventEmitter {
      */
     start () {
         this.runtime.start();
+        console.log('Start VM.');
+        fs.readFile("test.zip", function(err, data) {
+          if (err) throw err;
+          JSZip.loadAsync(data).then(function (zip) {
+              this.loadProject(zip);
+          });
+});
     }
 
     /**
