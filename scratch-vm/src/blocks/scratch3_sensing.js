@@ -168,7 +168,7 @@ class Scratch3SensingBlocks {
     }
 
     touchingObject (args, util) {
-      console.log(Cast.toString(args.TOUCHINGOBJECTMENU));
+      //console.log(Cast.toString(args.TOUCHINGOBJECTMENU));
         return util.target.isTouchingObject(args.TOUCHINGOBJECTMENU);
     }
 

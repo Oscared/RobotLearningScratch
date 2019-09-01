@@ -37,7 +37,7 @@ goog.require('Blockly.Msg');
 Blockly.Msg.CONTROL_FOREVER = 'forever';
 Blockly.Msg.CONTROL_REPEAT = 'repeat %1';
 Blockly.Msg.CONTROL_IF = 'if %1 then';
-Blockly.Msg.CONTROL_ELSE = 'else';
+Blockly.Msg.CONTROL_ELSE = 'otherwise';
 Blockly.Msg.CONTROL_STOP = 'stop';
 Blockly.Msg.CONTROL_STOP_ALL = 'all';
 Blockly.Msg.CONTROL_STOP_THIS = 'this script';
@@ -55,6 +55,7 @@ Blockly.Msg.CONTROL_COUNTER = 'counter';
 Blockly.Msg.CONTROL_INCRCOUNTER = 'increment counter';
 Blockly.Msg.CONTROL_CLEARCOUNTER = 'clear counter';
 Blockly.Msg.CONTROL_ALLATONCE = 'all at once';
+Blockly.Msg.CONTROL_ELSE_CAT = 'If the cat blocks the door';
 
 // Data blocks
 Blockly.Msg.DATA_SETVARIABLETO = 'set %1 to %2';
@@ -184,6 +185,14 @@ Blockly.Msg.MOTION_GRIDMOVE = 'move %1 square forward';
 Blockly.Msg.MOTION_PICKOBJECT = 'pick up newspaper';
 Blockly.Msg.MOTION_LEFT = 'turn to the left %1';
 Blockly.Msg.MOTION_RIGHT = 'turn to the right %1';
+Blockly.Msg.MOTION_CHARGE = 'Charge battery %1';
+Blockly.Msg.MOTION_ROOM = 'Move to the %1';
+Blockly.Msg.MOVE_ROOM_HALLWAY = 'Hallway';
+Blockly.Msg.MOVE_ROOM_KITCHEN = 'Kitchen';
+Blockly.Msg.MOVE_ROOM_LIV = 'Living Room';
+Blockly.Msg.MOVE_ROOM_BED = 'Bed Room';
+Blockly.Msg.MOVE_ROOM_CHARGE = 'Charging';
+Blockly.Msg.MOTION_MOVECAT = 'Make the cat move';
 
 // Operators blocks
 Blockly.Msg.OPERATORS_ADD = '%1 + %2';

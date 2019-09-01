@@ -529,3 +529,33 @@ Blockly.Blocks['control_all_at_once'] = {
     });
   }
 };
+
+Blockly.Blocks['control_if_else_cat'] = {
+  /**
+   * Block for if-else.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "type": "control_if_else",
+      "message0": Blockly.Msg.CONTROL_ELSE_CAT,
+      "message1": "%1",
+      "message2": Blockly.Msg.CONTROL_ELSE,
+      "message3": "%1",
+      "args1": [
+        {
+          "type": "input_statement",
+          "name": "SUBSTACK"
+        }
+      ],
+      "args3": [
+        {
+          "type": "input_statement",
+          "name": "SUBSTACK2"
+        }
+      ],
+      "category": Blockly.Categories.control,
+      "extensions": ["colours_control", "shape_statement"]
+    });
+  }
+};

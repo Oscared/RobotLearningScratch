@@ -171,7 +171,7 @@ class Stage extends React.Component {
         if (drawableId === null) return;
         const targetId = this.props.vm.getTargetIdForDrawableId(drawableId);
         if (targetId === null) return;
-        this.props.vm.setEditingTarget(targetId);
+        //this.props.vm.setEditingTarget(targetId);
     }
     onMouseMove (e) {
         const {x, y} = getEventXY(e);

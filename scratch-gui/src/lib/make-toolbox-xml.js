@@ -132,7 +132,7 @@ const motion = function (isStage, targetId) {
                 </shadow>
             </value>
         </block> */ `
-        <block type="motion_turnright">
+        <!--<block type="motion_turnright">
             <value name="DEGREES">
                 <shadow type="math_number">
                     <field name="NUM">15</field>
@@ -152,11 +152,19 @@ const motion = function (isStage, targetId) {
                     <field name="NUM">1</field>
                 </shadow>
             </value>
-        </block>
+        </block>-->
+        <block type="motion_movetoroom">
+			<value name="DESTINATION">
+				<shadow id="motion_movetoroom_menu"
+				type="motion_movetoroom_menu"/>
+			</value>
+		</block>
         ${blockSeparator}
-        <block type="motion_pickobject"/>
-        <block type="motion_left"/>
-        <block type="motion_right"/> `}
+<!--        <block type="motion_pickobject"/>-->
+        <block type="motion_charge"/>
+        <block type="motion_movecat"/>
+        <!--<block type="motion_left"/>
+        <block type="motion_right"/>--> `}
         ${categorySeparator}
     </category>
     `;
@@ -423,21 +431,22 @@ const control = function (isStage) {
             </value>
         </block>
         ${blockSeparator}
-        <block type="control_repeat">
+        <!--<block type="control_repeat">
             <value name="TIMES">
                 <shadow type="math_whole_number">
                     <field name="NUM">10</field>
                 </shadow>
             </value>
         </block>
-        <block id="forever" type="control_forever"/>
+        <block id="forever" type="control_forever"/>-->
         ${blockSeparator}
-        <block type="control_if"/>
-        <block type="control_if_else"/>
-        <block id="wait_until" type="control_wait_until"/>
-        <block id="repeat_until" type="control_repeat_until"/>
+        <!--<block type="control_if"/>
+        <block type="control_if_else"/>-->
+        <block type="control_if_else_cat"/>
+        <!--<block id="wait_until" type="control_wait_until"/>
+        &lt;!&ndash;<block id="repeat_until" type="control_repeat_until"/>&ndash;&gt;-->
         ${blockSeparator}
-        <block type="control_stop"/>
+        <!--<block type="control_stop"/>-->
         ${blockSeparator}
 
         ${categorySeparator}
@@ -794,11 +803,11 @@ const makeToolboxXML = function (isStage, targetId, categoriesXML,
         motion(isStage, targetId), gap,
         //looks(isStage, targetId, costumeName, backdropName), gap,
         //sound(isStage, targetId, soundName), gap,
-        events(isStage, targetId), gap,
-        control(isStage, targetId), gap,
-        sensing(isStage, targetId), gap,
-        operators(isStage, targetId), gap,
-        variables(isStage, targetId)//, gap,
+        //events(isStage, targetId), gap,
+        control(isStage, targetId)//, gap,
+        //sensing(isStage, targetId), gap,
+        //operators(isStage, targetId), gap,
+        //variables(isStage, targetId)//, gap,
         //myBlocks(isStage, targetId)
     ];
 

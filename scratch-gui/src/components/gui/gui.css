@@ -35,7 +35,7 @@
 
 .editor-wrapper {
     flex-basis: 600px;
-    flex-grow: 1;
+    flex-grow: 0.5;
     flex-shrink: 0;
     position: relative;
 

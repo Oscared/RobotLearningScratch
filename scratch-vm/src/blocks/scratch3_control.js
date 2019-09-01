@@ -36,7 +36,8 @@ class Scratch3ControlBlocks {
             control_get_counter: this.getCounter,
             control_incr_counter: this.incrCounter,
             control_clear_counter: this.clearCounter,
-            control_all_at_once: this.allAtOnce
+            control_all_at_once: this.allAtOnce,
+            control_if_else_cat: this.ifElseCat
         };
     }
 
@@ -198,6 +199,15 @@ class Scratch3ControlBlocks {
         // "run without screen refresh" custom blocks do now, but this was
         // removed before the release of 2.0.)
         util.startBranch(1, false);
+    }
+
+    ifElseCat (args, util) {
+        const condition = Cast.toNumber(util.target.lookupVariableByNameAndType("cat_present", "").value);
+        if (condition) {
+            util.startBranch(1, false);
+        } else {
+            util.startBranch(2, false);
+        }
     }
 }
 

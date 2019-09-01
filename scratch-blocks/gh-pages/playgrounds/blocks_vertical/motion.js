@@ -681,3 +681,88 @@ Blockly.Blocks['motion_right'] = {
     });
   }
 };
+
+Blockly.Blocks['motion_movecat'] = {
+  /**
+   * Block to move the cat.
+   * @this Blocky.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.MOTION_MOVECAT,
+      "category": Blockly.Categories.motion,
+      "extensions": ["colours_motion", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['motion_charge'] = {
+  /**
+   * Block to charge.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.MOTION_CHARGE,
+      "args0": [
+        {
+          "type": "field_image",
+          "src": Blockly.mainWorkspace.options.pathToMedia + "battery.svg",
+          "width": 24,
+          "height": 24
+        }
+      ],
+      "category": Blockly.Categories.motion,
+      "extensions": ["colours_motion", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['motion_movetoroom_menu'] = {
+  /**
+   * Move to a room menu.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": "%1",
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "DESTINATION",
+          "options": [
+            [Blockly.Msg.MOVE_ROOM_HALLWAY, 'Hallway'],
+             [Blockly.Msg.MOVE_ROOM_KITCHEN, 'Kitchen'],
+             [Blockly.Msg.MOVE_ROOM_LIV, 'Living Room'],
+             [Blockly.Msg.MOVE_ROOM_BED, 'Bed Room'],
+            [Blockly.Msg.MOVE_ROOM_CHARGE, 'Charging']
+          ]
+        },
+      ],
+      "colour": Blockly.Colours.motion.secondary,
+      "colourSecondary": Blockly.Colours.motion.secondary,
+      "colourTertiary": Blockly.Colours.motion.tertiary,
+      "extensions": ["output_string"]
+    });
+  }
+};
+
+Blockly.Blocks['motion_movetoroom'] = {
+  /**
+   * Block to move to a room.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.MOTION_ROOM,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "DESTINATION"
+        }
+      ],
+      "category": Blockly.Categories.motion,
+      "extensions": ["colours_motion", "shape_statement"]
+    });
+  }
+};

@@ -247,7 +247,7 @@ const GUIComponent = props => {
                                             id="gui.gui.codeTab"
                                         />
                                     </Tab>
-                                    <Tab
+                                    {/*<Tab
                                         className={tabClassNames.tab}
                                         onClick={onActivateCostumesTab}
                                     >
@@ -282,7 +282,7 @@ const GUIComponent = props => {
                                             description="Button to get to the sounds panel"
                                             id="gui.gui.soundsTab"
                                         />
-                                    </Tab>
+                                    </Tab>*/}
                                 </TabList>
                                 <TabPanel className={tabClassNames.tabPanel}>
                                     <Box className={styles.blocksWrapper}>
@@ -297,7 +297,7 @@ const GUIComponent = props => {
                                             vm={vm}
                                         />
                                     </Box>
-                                    <Box className={styles.extensionButtonContainer}>
+                                    {/*<Box className={styles.extensionButtonContainer}>
                                         <button
                                             className={styles.extensionButton}
                                             title={intl.formatMessage(messages.addExtension)}
@@ -309,7 +309,7 @@ const GUIComponent = props => {
                                                 src={addExtensionIcon}
                                             />
                                         </button>
-                                    </Box>
+                                    </Box>*/}
                                     <Box className={styles.watermark}>
                                         <Watermark />
                                     </Box>
@@ -321,9 +321,9 @@ const GUIComponent = props => {
                                     {soundsTabVisible ? <SoundTab vm={vm} /> : null}
                                 </TabPanel>
                             </Tabs>
-                            {backpackVisible ? (
+                            {/*backpackVisible ? (
                                 <Backpack host={backpackHost} />
-                            ) : null}
+                            ) : null*/}
                         </Box>
 
                         <Box className={classNames(styles.stageAndTargetWrapper, styles[stageSize])}>
@@ -333,12 +333,34 @@ const GUIComponent = props => {
                                 stageSize={stageSize}
                                 vm={vm}
                             />
-                            <Box className={styles.targetWrapper}>
-                                <TargetPane
-                                    stageSize={stageSize}
-                                    vm={vm}
-                                />
-                            </Box>
+                            <div>
+                                <div style={{paddingLeft: '10px','fontSize': '22px', width: '670px'}}>Instructions </div>
+                            </div>
+                            <div>
+                                <div style={{paddingLeft: '10px','fontSize': '16px', width: '670px'}}>Create a program that: 1) makes Cozmo the robot move to its charging station,
+                                    2) charge its battery, and 3) move back to the living room.
+                                </div>
+                            </div>
+                            <div>
+                                <div style={{paddingLeft: '10px','fontSize': '16px', width: '670px'}}>You can drag and drop actions from the
+                                    menu on the left, drag them to the 'When Green Flag Clicked' block. When you click the green Flag (next to the Red Stop sign)
+                                    the program should make the robot do all 3 steps in that one click. </div>
+                            </div>
+                            <div>
+                                <div style={{paddingLeft: '10px','fontSize': '16px', width: '670px'}}>
+                                    If the program is not correct, just click stop, then click retry to reset the robot, change your blocks and try again! </div>
+                            </div>
+                            <div>
+                                <div style={{paddingLeft: '10px','fontSize': '16px', width: '670px'}}>
+                                    You should take maximum 15 minutes to finish the task. If you do not have a successful program after 15 minutes, please still download your
+                                project and upload the unfinished program.</div>
+                            </div>
+                            {/*<Box className={styles.targetWrapper}>*/}
+                            {/*<TargetPane*/}
+                            {/*stageSize={stageSize}*/}
+                            {/*vm={vm}*/}
+                            {/*/>*/}
+                            {/*</Box>*/}
                         </Box>
                     </Box>
                 </Box>
