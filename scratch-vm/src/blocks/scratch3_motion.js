@@ -478,6 +478,13 @@ class Scratch3MotionBlocks {
                     });
                     console.log('msg: ', message1);
 
+                } else if (currPos[0] > 43 && currPos[1] > 90){
+                    //In the Hallway
+                    const message1 = `${goTarget}`;
+                    util.stackFrame.startedThreads = util.startHats('event_whenbroadcastreceived', {
+                        BROADCAST_OPTION: message1
+                    });
+                    console.log('msg: ', message1);
                 }
                 else{
                     this.Looks.sayforsecs({MESSAGE: 'I cannot go to the Hallway from here directly.', SECS: 3}, util);
