@@ -344,11 +344,11 @@ const GUIComponent = props => {
                             <div>
                                 <div style={{paddingLeft: '10px','fontSize': '16px', width: '670px'}}>You can drag and drop actions from the
                                     menu on the left, drag them to the 'When Green Flag Clicked' block. When you click the green Flag (next to the Red Stop sign)
-                                    the program should make the robot do all 3 steps in that one click. </div>
+                                    the program should make the robot do all 3 steps in that one click. Hint: Cozmo can only move to adjacent rooms. </div>
                             </div>
                             <div>
                                 <div style={{paddingLeft: '10px','fontSize': '16px', width: '670px'}}>
-                                    If the program is not correct, just click stop, then click retry to reset the robot, change your blocks and try again! </div>
+                                    If the program is not correct, just click stop to stop Cozmo, then click retry to reset the robots position, change your blocks and try again! </div>
                             </div>
                             <div>
                                 <div style={{paddingLeft: '10px','fontSize': '16px', width: '670px'}}>

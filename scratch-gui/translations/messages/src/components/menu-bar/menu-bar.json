@@ -55,11 +55,6 @@
     "defaultMessage": "File"
   },
   {
-    "id": "gui.menuBar.uploadFromComputer",
-    "description": "Menu bar item for uploading a project from your computer",
-    "defaultMessage": "Load from your computer"
-  },
-  {
     "id": "gui.menuBar.downloadToComputer",
     "description": "Menu bar item for downloading a project to your computer",
     "defaultMessage": "Save to your computer"
