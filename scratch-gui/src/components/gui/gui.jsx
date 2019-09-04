@@ -338,7 +338,8 @@ const GUIComponent = props => {
                             </div>
                             <div>
                                 <div style={{paddingLeft: '10px','fontSize': '16px', width: '670px'}}>Create a program that: 1) makes Cozmo the robot move to its charging station,
-                                    2) charge its battery, and 3) move back to the living room.
+                                    2) charge its battery, and 3) move back to the living room. NOTE: You are not required to use all available blocks. Just use the ones that you
+                                    need to complete the task successfully.
                                 </div>
                             </div>
                             <div>
