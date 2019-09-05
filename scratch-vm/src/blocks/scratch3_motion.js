@@ -407,7 +407,7 @@ class Scratch3MotionBlocks {
             util.startHats('event_whenbroadcastreceived', {
                 BROADCAST_OPTION: 'charging'
             });
-            this.Looks.sayforsecs({MESSAGE: 'Charging..', SECS: 2}, util);
+            //this.Looks.sayforsecs({MESSAGE: 'Charging..', SECS: 2}, util);
 
             //this.Control.wait({DURATION: '5'}, util);
         } else if (util.stackTimerNeedsInit()){
@@ -418,7 +418,7 @@ class Scratch3MotionBlocks {
         }
 
         if (util.stackTimerNeedsInit()) {
-            const duration = Math.max(0, 1000 * 2);
+            const duration = Math.max(0, 1000 * 0.5);
 
             util.startStackTimer(duration);
             console.log("Init wait time");
@@ -441,7 +441,7 @@ class Scratch3MotionBlocks {
         console.log("All the variables:");
         console.log(util.target.getAllVariableNamesInScopeByType(''));
 */
-        if (Cast.toNumber(util.target.lookupVariableByNameAndType('cat_present', '').value) && util.target.x == 1 && util.target.y == 143){
+        if (Cast.toNumber(util.target.lookupVariableByNameAndType('cat_present', '').value) && (util.target.x == 1 || util.target.x == 108) && util.target.y == 143){
             const message1 = 'laser';
             util.startHats('event_whenbroadcastreceived', {
                 BROADCAST_OPTION: message1
@@ -595,13 +595,15 @@ class Scratch3MotionBlocks {
                     });
                     console.log('msg: ', message1);
                 }
+                else{
+                    this.Looks.sayforsecs({MESSAGE: 'I cannot go to the Charging Station from here directly.', SECS: 3}, util);
+                }
             }
             else{
                 console.log("No correct input");
                 console.log(goTarget);
             }
 
-            console.log(util.stackFrame.startedThreads);
 
             if (typeof util.stackFrame.startedThreads === 'undefined') {
                 // Nothing was started.

@@ -443,6 +443,7 @@ const control = function (isStage) {
         <!--<block type="control_if"/>
         <block type="control_if_else"/>-->
         <block type="control_if_else_cat"/>
+        <block type="control_repeat_until_charged"/>
         <!--<block id="wait_until" type="control_wait_until"/>
         &lt;!&ndash;<block id="repeat_until" type="control_repeat_until"/>&ndash;&gt;-->
         ${blockSeparator}

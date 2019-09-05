@@ -37,7 +37,8 @@ class Scratch3ControlBlocks {
             control_incr_counter: this.incrCounter,
             control_clear_counter: this.clearCounter,
             control_all_at_once: this.allAtOnce,
-            control_if_else_cat: this.ifElseCat
+            control_if_else_cat: this.ifElseCat,
+            control_repeat_until_charged: this.repeatUntilCharged
         };
     }
 
@@ -209,6 +210,17 @@ class Scratch3ControlBlocks {
             util.startBranch(2, false);
         }
     }
+
+    repeatUntilCharged (args, util) {
+        const condition = Cast.toNumber(util.target.lookupVariableByNameAndType("fully_charged", "").value);
+        // If the condition is false (repeat UNTIL), start the branch.
+        console.log(condition);
+        if (condition < 1) {
+            console.log('Starting branch to repeat, not fully charged.');
+            util.startBranch(1, true);
+        }
+    }
+
 }
 
 module.exports = Scratch3ControlBlocks;

@@ -56,6 +56,7 @@ Blockly.Msg.CONTROL_INCRCOUNTER = 'increment counter';
 Blockly.Msg.CONTROL_CLEARCOUNTER = 'clear counter';
 Blockly.Msg.CONTROL_ALLATONCE = 'all at once';
 Blockly.Msg.CONTROL_ELSE_CAT = 'If the cat blocks the door';
+Blockly.Msg.CONTROL_REPEAT_CHARGED = 'Repeat until fully charged';
 
 // Data blocks
 Blockly.Msg.DATA_SETVARIABLETO = 'set %1 to %2';
