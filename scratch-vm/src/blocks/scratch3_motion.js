@@ -595,6 +595,9 @@ class Scratch3MotionBlocks {
                     });
                     console.log('msg: ', message1);
                 }
+                else{
+                    this.Looks.sayforsecs({MESSAGE: 'I cannot go to the Charging Station from here directly.', SECS: 3}, util);
+                }
             }
             else{
                 console.log("No correct input");
