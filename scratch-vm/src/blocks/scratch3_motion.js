@@ -407,9 +407,12 @@ class Scratch3MotionBlocks {
             util.startHats('event_whenbroadcastreceived', {
                 BROADCAST_OPTION: 'charging'
             });
-            //this.Looks.sayforsecs({MESSAGE: 'Charging..', SECS: 2}, util);
 
-            //this.Control.wait({DURATION: '5'}, util);
+            if (Cast.toNumber(util.target.lookupVariableByNameAndType('fully_charged', '').value) > 0.95){
+                util.target.lookupVariableByNameAndType('fully_charged', '').value = 1;
+                console.log(util.target.lookupVariableByNameAndType('fully_charged', '').value);
+            }
+
         } else if (util.stackTimerNeedsInit()){
             this.Looks.sayforsecs({MESSAGE: 'I am not at my charging station.', SECS: 5}, util);
             util.startHats('event_whenbroadcastreceived', {
@@ -428,10 +431,6 @@ class Scratch3MotionBlocks {
             console.log("Waiting tick");
             util.yield();
         }
-        // this.Control.wait({DURATION: '5'}, util);
-        // util.startHats('event_whenbroadcastreceived', {
-        //      BROADCAST_OPTION: 'charged'
-        //  });
     }
 
     moveCat (args, util){

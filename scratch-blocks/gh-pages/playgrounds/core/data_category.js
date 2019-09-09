@@ -93,7 +93,7 @@ Blockly.DataCategory = function(workspace) {
   console.log(xmlList[0]);
   console.log(xmlList[13]);
   console.log([xmlList[1], xmlList[3]]);
-  return [xmlList[1], xmlList[3]];
+  return [xmlList[1], xmlList[2]];
   //return xmlList;
 };
 

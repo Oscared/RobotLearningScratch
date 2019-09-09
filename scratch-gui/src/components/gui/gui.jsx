@@ -337,15 +337,15 @@ const GUIComponent = props => {
                                 <div style={{paddingLeft: '10px','fontSize': '18px', width: '670px'}}>Instructions </div>
                             </div>
                             <div>
-                                <div style={{paddingLeft: '10px','fontSize': '12px', width: '670px'}}>Create a program that: 1) makes Cozmo the robot move to its charging station,
-                                    2) charge its battery, and 3) move back to the living room. NOTE: You are not required to use all available blocks. Just use the ones that you
+                                <div style={{paddingLeft: '10px','fontSize': '12px', width: '670px'}}>Create a program that: <br/> 1) makes Cozmo the robot move to its charging station,
+                                    <br/> 2) charge its battery, and <br/> 3) move back to the living room. <br/> NOTE: You are not required to use all available blocks. Just use the ones that you
                                     need to complete the task successfully. When the cat is present, the cat_present variable is 1 and otherwise 0. The fully_charged variable goes from 0 (no battery) to 1 (full charge).
                                 </div>
                             </div>
                             <div>
                                 <div style={{paddingLeft: '10px','fontSize': '12px', width: '670px'}}>You can drag and drop actions from the
                                     menu on the left, drag them to the 'When Green Flag Clicked' block. When you click the green Flag (next to the Red Stop sign)
-                                    the program should make the robot do all 3 steps in that one click. Hint: Cozmo can only move to adjacent rooms. </div>
+                                    the program should make the robot do all 3 steps in that one click. <br/> Hint: Cozmo can only move to adjacent rooms. </div>
                             </div>
                             <div>
                                 <div style={{paddingLeft: '10px','fontSize': '12px', width: '670px'}}>
