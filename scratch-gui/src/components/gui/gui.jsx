@@ -339,7 +339,7 @@ const GUIComponent = props => {
                             <div>
                                 <div style={{paddingLeft: '10px','fontSize': '12px', width: '670px'}}>Create a program that: 1) makes Cozmo the robot move to its charging station,
                                     2) charge its battery, and 3) move back to the living room. NOTE: You are not required to use all available blocks. Just use the ones that you
-                                    need to complete the task successfully.
+                                    need to complete the task successfully. When the cat is present, the cat_present variable is 1 and otherwise 0. The fully_charged variable goes from 0 (no battery) to 1 (full charge).
                                 </div>
                             </div>
                             <div>

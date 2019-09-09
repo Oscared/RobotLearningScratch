@@ -423,15 +423,15 @@ ${blockSeparator}
 const control = function (isStage) {
     return `
     <category name="%{BKY_CATEGORY_CONTROL}" id="control" colour="#FFAB19" secondaryColour="#CF8B17">
-        <block type="control_wait">
+        <!-- <block type="control_wait">
             <value name="DURATION">
                 <shadow type="math_positive_number">
                     <field name="NUM">1</field>
                 </shadow>
             </value>
-        </block>
+        </block> -->
         ${blockSeparator}
-        <!--<block type="control_repeat">
+        <!-- <block type="control_repeat">
             <value name="TIMES">
                 <shadow type="math_whole_number">
                     <field name="NUM">10</field>
@@ -440,12 +440,12 @@ const control = function (isStage) {
         </block>
         <block id="forever" type="control_forever"/>-->
         ${blockSeparator}
-        <!--<block type="control_if"/>
-        <block type="control_if_else"/>-->
-        <block type="control_if_else_cat"/>
-        <block type="control_repeat_until_charged"/>
-        <!--<block id="wait_until" type="control_wait_until"/>
-        &lt;!&ndash;<block id="repeat_until" type="control_repeat_until"/>&ndash;&gt;-->
+        <!--<block type="control_if"/>-->
+        <block type="control_if_else"/>
+        <!-- <block type="control_if_else_cat"/>
+        <block type="control_repeat_until_charged"/> -->
+        <!--<block id="wait_until" type="control_wait_until"/> -->
+        <block id="repeat_until" type="control_repeat_until"/>
         ${blockSeparator}
         <!--<block type="control_stop"/>-->
         ${blockSeparator}
@@ -744,10 +744,46 @@ const operators = function () {
     const banana = ScratchBlocks.ScratchMsgs.translate('OPERATORS_JOIN_BANANA', 'banana');
     const letter = ScratchBlocks.ScratchMsgs.translate('OPERATORS_LETTEROF_APPLE', 'a');
     return `
-    <category name="%{BKY_CATEGORY_OPERATORS}" id="operators" colour="#40BF4A" secondaryColour="#389438">
 
-        <block type="operator_and"/>
-        <block type="operator_or"/>
+    <category name="%{BKY_CATEGORY_OPERATORS}" id="operators" colour="#40BF4A" secondaryColour="#389438">
+        <block type="operator_gt">
+    <value name="OPERAND1">
+        <shadow type="text">
+            <field name="TEXT"/>
+        </shadow>
+    </value>
+    <value name="OPERAND2">
+        <shadow type="text">
+            <field name="TEXT">1</field>
+        </shadow>
+    </value>
+</block>
+<block type="operator_lt">
+    <value name="OPERAND1">
+        <shadow type="text">
+            <field name="TEXT"/>
+        </shadow>
+    </value>
+    <value name="OPERAND2">
+        <shadow type="text">
+            <field name="TEXT">1</field>
+        </shadow>
+    </value>
+</block>
+<block type="operator_equals">
+    <value name="OPERAND1">
+        <shadow type="text">
+            <field name="TEXT"/>
+        </shadow>
+    </value>
+    <value name="OPERAND2">
+        <shadow type="text">
+            <field name="TEXT">1</field>
+        </shadow>
+    </value>
+</block>
+        <!-- <block type="operator_and"/>
+        <block type="operator_or"/> -->
         <block type="operator_not"/>
 
         ${categorySeparator}
@@ -805,10 +841,11 @@ const makeToolboxXML = function (isStage, targetId, categoriesXML,
         //looks(isStage, targetId, costumeName, backdropName), gap,
         //sound(isStage, targetId, soundName), gap,
         //events(isStage, targetId), gap,
-        control(isStage, targetId)//, gap,
+        control(isStage, targetId), gap,
+        operators(isStage, targetId), gap,
+        variables(isStage, targetId)
         //sensing(isStage, targetId), gap,
-        //operators(isStage, targetId), gap,
-        //variables(isStage, targetId)//, gap,
+        //, gap,
         //myBlocks(isStage, targetId)
     ];
 

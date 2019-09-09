@@ -25,7 +25,7 @@ const START_UPDATING_BEFORE_CREATING_COPY = 'scratch-gui/project-state/START_UPD
 const START_UPDATING_BEFORE_CREATING_NEW = 'scratch-gui/project-state/START_UPDATING_BEFORE_CREATING_NEW';
 const START_UPDATING_BEFORE_FILE_UPLOAD = 'scratch-gui/project-state/START_UPDATING_BEFORE_FILE_UPLOAD';
 
-const defaultProjectId = '327091398'; // Level 2  '321147033';hardcoded id of default project
+const defaultProjectId = '327129841'; // Level 2  '321147033';hardcoded id of default project
 
 const LoadingState = keyMirror({
     NOT_LOADED: null,

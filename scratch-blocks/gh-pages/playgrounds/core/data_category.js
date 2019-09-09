@@ -89,7 +89,12 @@ Blockly.DataCategory = function(workspace) {
     Blockly.DataCategory.addHideList(xmlList, firstVariable);
   }
 
-  return xmlList;
+  console.log(xmlList);
+  console.log(xmlList[0]);
+  console.log(xmlList[13]);
+  console.log([xmlList[1], xmlList[3]]);
+  return [xmlList[1], xmlList[3]];
+  //return xmlList;
 };
 
 /**
