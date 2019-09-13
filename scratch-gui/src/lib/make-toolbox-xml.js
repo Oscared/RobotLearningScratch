@@ -746,7 +746,7 @@ const operators = function () {
     return `
 
     <category name="%{BKY_CATEGORY_OPERATORS}" id="operators" colour="#40BF4A" secondaryColour="#389438">
-        <block type="operator_gt">
+       <!-- <block type="operator_gt">
     <value name="OPERAND1">
         <shadow type="text">
             <field name="TEXT"/>
@@ -769,7 +769,7 @@ const operators = function () {
             <field name="TEXT">1</field>
         </shadow>
     </value>
-</block>
+</block> -->
 <block type="operator_equals">
     <value name="OPERAND1">
         <shadow type="text">
