@@ -334,27 +334,21 @@ const GUIComponent = props => {
                                 vm={vm}
                             />
                             <div>
-                                <div style={{paddingLeft: '10px','fontSize': '18px', width: '670px'}}>Instructions </div>
+                                <div style={{paddingLeft: '0px','fontSize': '14px', width: '630px'}}>Instructions </div>
                             </div>
                             <div>
-                                <div style={{paddingLeft: '10px','fontSize': '12px', width: '670px'}}>Create a program that: 1) makes Cozmo the robot move to its charging station,
-                                    2) charge its battery, and 3) move back to the living room. NOTE: You are not required to use all available blocks. Just use the ones that you
-                                    need to complete the task successfully.
+                                <div style={{paddingLeft: '0px','fontSize': '12px', width: '630px'}}>Create a program that:
+                                    <br/>1) makes Cozmo the robot move to its charging station,
+                                    <br/> 2) charge its battery, and <br/> 3) move back to the living room.
+                                    <br/><br/> NOTE: You are not required to use all available blocks.
+                                    Do NOT change ny existing code you may find in the Workspace.
+                                    <br/><br/> Hint: Cozmo can only move to adjacent rooms.
                                 </div>
                             </div>
                             <div>
-                                <div style={{paddingLeft: '10px','fontSize': '12px', width: '670px'}}>You can drag and drop actions from the
-                                    menu on the left, drag them to the 'When Green Flag Clicked' block. When you click the green Flag (next to the Red Stop sign)
-                                    the program should make the robot do all 3 steps in that one click. Hint: Cozmo can only move to adjacent rooms. </div>
-                            </div>
-                            <div>
-                                <div style={{paddingLeft: '10px','fontSize': '12px', width: '670px'}}>
-                                    If the program is not correct, just click stop to stop Cozmo, then click retry to reset the robots position, change your blocks and try again! </div>
-                            </div>
-                            <div>
-                                <div style={{paddingLeft: '10px','fontSize': '12px', width: '670px'}}>
-                                    You should take maximum 15 minutes to finish the task. If you do not have a successful program after 15 minutes, please still download your
-                                project and upload the unfinished program.</div>
+                                <div style={{paddingLeft: '0px','fontSize': '12px', width: '630px'}}>
+                                    Finish the task in max 15 minutes. If you are not done in time, please download your
+                                    project and upload the unfinished program. </div>
                             </div>
                             {/*<Box className={styles.targetWrapper}>*/}
                             {/*<TargetPane*/}
