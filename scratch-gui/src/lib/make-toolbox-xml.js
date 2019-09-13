@@ -423,7 +423,7 @@ ${blockSeparator}
 const control = function (isStage) {
     return `
     <category name="%{BKY_CATEGORY_CONTROL}" id="control" colour="#FFAB19" secondaryColour="#CF8B17">
-        <block type="control_wait">
+        <!-- <block type="control_wait">
             <value name="DURATION">
                 <shadow type="math_positive_number">
                     <field name="NUM">1</field>
@@ -431,7 +431,7 @@ const control = function (isStage) {
             </value>
         </block>
         ${blockSeparator}
-        <!--<block type="control_repeat">
+        <block type="control_repeat">
             <value name="TIMES">
                 <shadow type="math_whole_number">
                     <field name="NUM">10</field>
