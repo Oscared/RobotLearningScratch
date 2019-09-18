@@ -360,6 +360,23 @@ class MenuBar extends React.Component {
                                     </MenuSection>
                                 )}
                                 <MenuSection>
+                                <SBFileUploader onUpdateProjectTitle={this.props.onUpdateProjectTitle}>
+                                        {(className, renderFileInput, loadProject) => (
+                                            <MenuItem
+                                                className={className}
+                                                onClick={loadProject}
+                                            >
+                                                <FormattedMessage
+                                                    defaultMessage="Load from your computer"
+                                                    description={
+                                                        'Menu bar item for uploading a project from your computer'
+                                                    }
+                                                    id="gui.menuBar.uploadFromComputer"
+                                                />
+                                                {renderFileInput()}
+                                            </MenuItem>
+                                        )}
+                                    </SBFileUploader>
                                     <SB3Downloader>{(className, downloadProjectCallback) => (
                                         <MenuItem
                                             className={className}
